@@ -1,0 +1,130 @@
+import time
+
+def loop_time(a, d):
+    """
+    Prints a value indefinitely with a delay between prints.
+
+    Parameters:
+    a : any
+        Value to print repeatedly.
+    d : float
+        Delay in seconds between prints.
+    """
+    try:
+        while True:
+            time.sleep(d)
+            print(a)
+    except KeyboardInterrupt:
+        print("user stopped loop")
+
+
+def repeat_text(b, d):
+    """
+    Prints a value a fixed number of times with no delay.
+
+    Parameters:
+    b : any
+        Value to print.
+    d : int
+        Number of repetitions.
+    """
+    for i in range(d):
+        print(b)
+
+
+def repeat_text_time(a, b, d):
+    """
+    Prints a value a fixed number of times with a delay between prints.
+
+    Parameters:
+    a : int
+        Number of repetitions.
+    b : float
+        Delay in seconds between prints.
+    d : any
+        Value to print.
+    """
+    for i in range(a):
+        time.sleep(b)
+        print(d)
+
+
+def repeat_function_time(a, b, function):
+    """
+    Calls a function repeatedly with a delay between calls.
+
+    Parameters:
+    a : int
+        Number of repetitions.
+    b : float
+        Delay in seconds between calls.
+    function : callable
+        Function to call each time (takes no arguments).
+    """
+    for i in range(a):
+        time.sleep(b)
+        function()
+
+
+def loop_functions_time(a, function):
+    """
+    Repeatedly calls a function with a delay between calls.
+
+    Parameters:
+    a : float
+        Delay in seconds between calls.
+    function : callable
+        Function to call repeatedly (takes no arguments).
+    """
+    try:
+        while True:
+            time.sleep(a)
+            function()
+    except KeyboardInterrupt:
+        print("user stopped loop")
+
+
+def loop_functions(function):
+    """
+    Repeatedly calls a function with no delay.
+
+    Parameters:
+    function : callable
+        Function to call repeatedly (takes no arguments).
+    """
+    try:
+        while True:
+            function()
+    except KeyboardInterrupt:
+        print("user stopped loop")
+
+
+def loop(a):
+    """
+    Prints a value indefinitely with no delay.
+
+    Parameters:
+    a : any
+        Value to print repeatedly.
+    """
+    try:
+        while True:
+            print(a)
+    except KeyboardInterrupt:
+        print("user stopped loop")
+
+
+def repeat_functions(a, function):
+    """
+    Calls a function a fixed number of times with no delay.
+
+    Parameters:
+    a : int
+        Number of repetitions.
+    function : callable
+        Function to call each time (takes no arguments).
+    """
+    for i in range(a):
+        function()
+
+
